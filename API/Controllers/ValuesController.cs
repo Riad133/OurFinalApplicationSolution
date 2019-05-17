@@ -20,7 +20,7 @@ namespace API.Controllers
         }
 
         // GET api/values/5
-        [Authorize(AuthenticationSchemes = OpenIddictValidationDefaults.AuthenticationScheme)]
+        [Authorize(AuthenticationSchemes = OpenIddictValidationDefaults.AuthenticationScheme,Roles = "merchant")]
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
